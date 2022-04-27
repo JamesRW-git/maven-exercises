@@ -2,14 +2,14 @@ import org.apache.commons.lang3.StringUtils;
 
 public class ExerciseRunner {
     public static void main(String[] args) {
-        System.out.println(returnsString());
+        System.out.println(numCheckString());
         System.out.println(flipStringCase());
         System.out.println(reverseString());
     }
 
-    public static String returnsString() {
-        String userString = Input.getString("Enter a string you want to see again: ");
-        return StringUtils.defaultString(userString);
+    public static boolean numCheckString() {
+        String userString = Input.getString("Enter a string you want to check if it is a number: ");
+        return StringUtils.isNumeric(userString);
     }
 
     public static String flipStringCase() {
